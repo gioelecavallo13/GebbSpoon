@@ -7,6 +7,9 @@ WORKDIR /app
 
 COPY . .
 
+# Copy custom nginx config
+COPY nginx.conf /opt/docker/etc/nginx/vhost.conf
+
 RUN composer install --no-dev --optimize-autoloader
 
 # Laravel permissions
