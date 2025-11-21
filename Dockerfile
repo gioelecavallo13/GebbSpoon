@@ -11,6 +11,7 @@ RUN composer install --no-dev --optimize-autoloader
 
 # Laravel permissions
 RUN chown -R application:application storage bootstrap/cache
-RUN chmod -R 775 storage/bootstrap/cache
+RUN chmod -R 775 storage
+RUN chmod -R 775 bootstrap/cache
 
 EXPOSE 8080
